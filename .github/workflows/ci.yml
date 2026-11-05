@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: セクションと索引の検査（README の検証スクリプトと同一）
+        run: python3 scripts/validate.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: 日本語 textlint（自然さ・文の流れ重視）
+        run: |
+          npm ci
+          npm run lint:text
