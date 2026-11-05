@@ -31,7 +31,7 @@ description: >-
 
 短くする。Claude Code では 1 ファイル 200 行未満を目安にする。長いと従い方が落ちる。Codex は、ルートから作業ディレクトリまで連結したサイズが `project_doc_max_bytes`（既定 32 KiB）に達すると、それ以降のファイルを足さない。上限に当たったら、近いディレクトリへ分ける。階層のあいだで矛盾する指示は消す。Claude Code はどちらに従うか決まらない。Codex は近いファイルが後から連結されて優先される。同じ規則を矛盾したまま残さない。矛盾や、存在しないファイルを指す指示は、Claude Code の `/doctor prompt-audit` で洗う。
 
-Claude Code と Codex を併用するとき、作業ディレクトリかその上位に `CLAUDE.md`、`.claude/CLAUDE.md`、`CLAUDE.local.md` があると、Claude Code は既定では `AGENTS.md` を読まない。`~/.claude/CLAUDE.md` はこの条件に入らない。`AGENTS.md` を両方の正本にするときは、隣の `CLAUDE.md` に、囲みのない1行として次を書く。
+Claude Code と Codex を併用するときの注意である。作業ディレクトリかその上位に `CLAUDE.md`、`.claude/CLAUDE.md`、`CLAUDE.local.md` があると、Claude Code は既定では `AGENTS.md` を読まない。なお `~/.claude/CLAUDE.md` は、この条件に入らない。`AGENTS.md` を両方の正本にするときは、隣の `CLAUDE.md` に、囲みのない1行として次を書く。
 
 @AGENTS.md
 
