@@ -14,7 +14,7 @@ description: >-
 1. `devenv.nix` を読む。すでに `languages.javascript` や `languages.typescript` があるときは、不足しているフラグだけを足す。
 2. Node.js を PATH に出すため `languages.javascript.enable = true;` を設定する。既定のパッケージは `pkgs.nodejs-slim` で、Node 本体は既定で有効になる。別の Node が必要なら `languages.javascript.package` を、`devenv search` で見つけた属性に替える。
 3. TypeScript のツールが必要なら `languages.typescript.enable = true;` を設定する。言語サーバーは既定で有効である。
-4. リポジトリのロックファイルに合わせてマネージャを1つ有効にする。`pnpm-lock.yaml` なら `languages.javascript.pnpm.enable`、`package-lock.json` なら `languages.javascript.npm.enable`、`yarn.lock` なら `languages.javascript.yarn.enable`。Corepack のラッパーを使う既存設定があるときだけ `languages.javascript.corepack.enable = true;` にする。`*.install.enable` は、シェル進入のたびにインストールする運用が既にあるときだけ有効にする。
+4. リポジトリのロックファイルに合わせてマネージャを1つ有効にする。`pnpm-lock.yaml` なら `languages.javascript.pnpm.enable` を、`package-lock.json` なら `languages.javascript.npm.enable` を有効にする。`yarn.lock` なら `languages.javascript.yarn.enable` を有効にする。Corepack のラッパーを使う既存設定があるときだけ `languages.javascript.corepack.enable = true;` にする。`*.install.enable` は、シェル進入のたびにインストールする運用が既にあるときだけ有効にする。
 5. CLI が language モジュールに無いときは `devenv search` で名前を確認し、`packages` に足す。
 6. `devenv shell` で `node` と、有効にしたマネージャのバージョンを確認する。`devenv.lock` は手で編集しない。入力を動かしたときだけ `devenv update` を使う。
 
