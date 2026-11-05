@@ -1,0 +1,1 @@
+{"rules":{"preset-ja-technical-writing":{"max-kanji-continuous-len":{"max":8},"max-ten":{"max":4},"no-doubled-joshi":{"allow":["に","も","か"],"min_interval":1,"strict":false},"no-mix-dearu-desumasu":false,"sentence-length":{"max":120}}}}

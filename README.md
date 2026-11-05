@@ -36,6 +36,7 @@ skill/
 
 ### agents-md
 
+- [agents-md/common/context-budget/AGENTS.md](agents-md/common/context-budget/AGENTS.md) — コンテキストを有限の注意予算として扱い、必要な情報だけを必要な時点で取りに行く
 - [agents-md/common/follow-project-checks/AGENTS.md](agents-md/common/follow-project-checks/AGENTS.md) — 完了前に、リポジトリが既に定義している確認コマンドを実行する
 - [agents-md/common/git-safety/AGENTS.md](agents-md/common/git-safety/AGENTS.md) — 秘密の混入、hook の迂回、公開履歴の強制上書きを避ける
 - [agents-md/nextjs/cache-and-mutations/AGENTS.md](agents-md/nextjs/cache-and-mutations/AGENTS.md) — Cache Components の有無に合わせて、読み取りキャッシュと更新を書く
