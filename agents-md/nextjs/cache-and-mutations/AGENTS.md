@@ -6,7 +6,7 @@ Cache Components の有無を見て、読み取りのキャッシュと Server F
 
 最初に `next.config.ts` を見る。`cacheComponents` が有効なときと無効なときで、従う文書が違う。
 
-`cacheComponents: true` のとき:
+`cacheComponents: true` のときは、次の決めごとに従う。
 
 - 新しいアプリの推奨設定では Cache Components と Partial Prefetching が有効である。`cacheComponents` を既存アプリで有効にするときは `partialPrefetching` も明示する。未設定は警告になる。移行中だけ `false` にし、警告消しのために黙って削除しない。
 - リクエスト間で再利用してよい非同期処理には、関数本体の先頭で `'use cache'` を書く。同じファイルの先頭に書くと、そのファイルの export すべてがキャッシュされる。`cacheLife` を一緒に呼び、暗黙の `default` プロファイルに頼らない。更新でまとめて無効化するものには `cacheTag` を付ける。引数と閉じ込めた値はキャッシュキーに入る。
@@ -18,7 +18,7 @@ Cache Components の有無を見て、読み取りのキャッシュと Server F
 
 データ更新は Server Function で行う。`'use server'` を非同期関数の本体、または専用ファイルの先頭に置く。Client Component の中では定義できない。クライアントからは、そのファイルを import して `<form action>` か `startTransition` 経由で呼ぶ。
 
-Server Function は UI を経由しない POST でも届く。関数の内部で認証と認可を行い、`FormData` は検証する。描画時にボタンを隠すだけでは境界にならない。クライアントから複数の Server Action を `Promise.all` で並列にしない。Next.js はクライアントごとにアクションを順に送る。並列にしたい処理は、1 つの Server Function の中で行う。
+Server Function は UI を経由しない POST でも届く。関数の内部で認証し、認可する。`FormData` は検証する。描画時にボタンを隠すだけでは境界にならない。クライアントから複数の Server Action を `Promise.all` で並列にしない。Next.js はクライアントごとにアクションを順に送る。並列にしたい処理は、1 つの Server Function の中で行う。
 
 ## 出典
 
