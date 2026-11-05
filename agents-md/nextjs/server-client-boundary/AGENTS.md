@@ -6,7 +6,7 @@ App Router で Server Component と Client Component の境界を保つための
 
 `layout` と `page` は既定で Server Component である。データ取得、秘密情報を使った処理、ブラウザへ送る JavaScript を増やしたくない UI はサーバーに置く。
 
-Client Component は、状態、イベントハンドラ、`useEffect`、`localStorage` や `window` などのブラウザ API、カスタムフックが必要な箇所に限る。ファイルの先頭、import より前に `'use client'` を書く。この指令があるモジュールが import するものはクライアント束縛に入る。インタラクティブな葉にだけ指令を付け、レイアウト全体には付けない。
+Client Component は、状態、イベントハンドラ、`useEffect`、`localStorage` や `window` などのブラウザ API、カスタムフックが必要な箇所に限る。ファイルの先頭、import より前に `'use client'` を書く。この指令があると、そのモジュールが import するものはクライアント束縛に入る。インタラクティブな葉にだけ指令を付け、レイアウト全体には付けない。
 
 Server Component から Client Component へ渡す props は、React がシリアライズできる値にする。関数やクラスインスタンスを渡さない。サーバーで描画した UI をクライアントの中に挟むときは、Client Component の `children` など props として Server Component を渡す。Client Component のファイルから Server Component を import しない。
 

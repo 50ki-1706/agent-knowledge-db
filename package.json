@@ -1,0 +1,13 @@
+{
+  "name": "agent-knowledge-db",
+  "private": true,
+  "description": "AIエージェント向け知識（AGENTS.md / SKILL.md）の検証用ツール定義",
+  "scripts": {
+    "lint:text": "textlint \"agents-md/**/*.md\" \"skill/**/*.md\"",
+    "check": "python3 scripts/validate.py && npm run lint:text"
+  },
+  "devDependencies": {
+    "textlint": "15.8.0",
+    "textlint-rule-preset-ja-technical-writing": "12.0.2"
+  }
+}
