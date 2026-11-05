@@ -23,7 +23,7 @@ export type { UserRole };
 
 4. 実行時に必要な名前に `type` が付いていたら外す。クラスや関数は値である。
 5. `import` を `require` に書き換えようとして失敗しているファイルは、CommonJS が必要なら `import x = require("x")` と `export =` に変える。このフラグは ECMAScript の `import` を `require` へ書き換えない。
-6. プロジェクトの型検査を実行する。
+6. プロジェクト全体で型検査をする。
 
 ## 出典
 
