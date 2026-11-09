@@ -39,6 +39,7 @@ skill/
 - [agents-md/common/context-budget/AGENTS.md](agents-md/common/context-budget/AGENTS.md) — コンテキストを有限の注意予算として扱い、必要な情報だけを必要な時点で取りに行く
 - [agents-md/common/follow-project-checks/AGENTS.md](agents-md/common/follow-project-checks/AGENTS.md) — 完了前に、リポジトリが既に定義している確認コマンドを実行する
 - [agents-md/common/git-safety/AGENTS.md](agents-md/common/git-safety/AGENTS.md) — 秘密の混入、hook の迂回、公開履歴の強制上書きを避ける
+- [agents-md/common/parallel-worktrees/AGENTS.md](agents-md/common/parallel-worktrees/AGENTS.md) — 並行するセッションの編集を、それぞれ別の worktree に隔離する
 - [agents-md/nextjs/cache-and-mutations/AGENTS.md](agents-md/nextjs/cache-and-mutations/AGENTS.md) — Cache Components の有無に合わせて、読み取りキャッシュと更新を書く
 - [agents-md/nextjs/read-bundled-docs/AGENTS.md](agents-md/nextjs/read-bundled-docs/AGENTS.md) — インストール済みの Next.js の文書を正とし、dev サーバーで検証する
 - [agents-md/nextjs/server-client-boundary/AGENTS.md](agents-md/nextjs/server-client-boundary/AGENTS.md) — Server Component と Client Component の境界を保つ
@@ -57,6 +58,7 @@ skill/
 - [skill/common/explain-before-shorten/SKILL.md](skill/common/explain-before-shorten/SKILL.md) — 日本語の説明を、口頭で伝わる文章にしてから意味を保って短くする
 - [skill/common/prune-agents-md/SKILL.md](skill/common/prune-agents-md/SKILL.md) — AGENTS.md と CLAUDE.md から、コードを読めば分かる指示を外す
 - [skill/common/read-nearest-agents/SKILL.md](skill/common/read-nearest-agents/SKILL.md) — 最も近い `AGENTS.md` を読んでから変更する
+- [skill/common/start-worktree-session/SKILL.md](skill/common/start-worktree-session/SKILL.md) — 並行して編集するセッションを git worktree で隔離して始める
 - [skill/common/vet-instruction-files/SKILL.md](skill/common/vet-instruction-files/SKILL.md) — 自分で書いていない指示ファイルの危険なセットアップでは止まり、報告する
 - [skill/nextjs/add-server-action/SKILL.md](skill/nextjs/add-server-action/SKILL.md) — 認証付きの Server Action を追加する
 - [skill/nextjs/cache-a-read/SKILL.md](skill/nextjs/cache-a-read/SKILL.md) — 読み取りを Cache Components の有無に合わせてキャッシュする
