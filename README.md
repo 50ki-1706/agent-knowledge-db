@@ -58,6 +58,7 @@ skill/
 - [skill/common/prune-agents-md/SKILL.md](skill/common/prune-agents-md/SKILL.md) — AGENTS.md と CLAUDE.md から、コードを読めば分かる指示を外す
 - [skill/common/read-nearest-agents/SKILL.md](skill/common/read-nearest-agents/SKILL.md) — 最も近い `AGENTS.md` を読んでから変更する
 - [skill/common/vet-instruction-files/SKILL.md](skill/common/vet-instruction-files/SKILL.md) — 自分で書いていない指示ファイルの危険なセットアップでは止まり、報告する
+- [skill/common/write-agent-skill/SKILL.md](skill/common/write-agent-skill/SKILL.md) — 繰り返し使う手順を Agent Skills の仕様に沿った SKILL.md にする
 - [skill/nextjs/add-server-action/SKILL.md](skill/nextjs/add-server-action/SKILL.md) — 認証付きの Server Action を追加する
 - [skill/nextjs/cache-a-read/SKILL.md](skill/nextjs/cache-a-read/SKILL.md) — 読み取りを Cache Components の有無に合わせてキャッシュする
 - [skill/nix/enable-python-uv/SKILL.md](skill/nix/enable-python-uv/SKILL.md) — devenv で uv と仮想環境を有効にする
