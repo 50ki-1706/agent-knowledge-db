@@ -36,6 +36,7 @@ skill/
 
 ### agents-md
 
+- [agents-md/common/claude-hooks/AGENTS.md](agents-md/common/claude-hooks/AGENTS.md) — 文章の指示では守られにくい約束を、hook で機械的に強制する
 - [agents-md/common/context-budget/AGENTS.md](agents-md/common/context-budget/AGENTS.md) — コンテキストを有限の注意予算として扱い、必要な情報だけを必要な時点で取りに行く
 - [agents-md/common/follow-project-checks/AGENTS.md](agents-md/common/follow-project-checks/AGENTS.md) — 完了前に、リポジトリが既に定義している確認コマンドを実行する
 - [agents-md/common/git-safety/AGENTS.md](agents-md/common/git-safety/AGENTS.md) — 秘密の混入、hook の迂回、公開履歴の強制上書きを避ける
@@ -47,6 +48,7 @@ skill/
 - [agents-md/nix/declare-environment/AGENTS.md](agents-md/nix/declare-environment/AGENTS.md) — パッケージ、言語、スクリプト、プロセスを `devenv.nix` に宣言する
 - [agents-md/python/ruff/AGENTS.md](agents-md/python/ruff/AGENTS.md) — Ruff をリンター兼フォーマッタとして使う
 - [agents-md/python/uv-project/AGENTS.md](agents-md/python/uv-project/AGENTS.md) — uv の依存関係とロックファイルを崩さない
+- [agents-md/python/uv-workspace/AGENTS.md](agents-md/python/uv-workspace/AGENTS.md) — 複数のパッケージの依存とロックを、uv workspace でまとめて扱う
 - [agents-md/react/effects-versus-events/AGENTS.md](agents-md/react/effects-versus-events/AGENTS.md) — Effect は表示による同期に限り、操作と派生値は別の場所に書く
 - [agents-md/react/list-keys/AGENTS.md](agents-md/react/list-keys/AGENTS.md) — リストの `key` にデータの安定した ID を使う
 - [agents-md/typescript/strict-catch/AGENTS.md](agents-md/typescript/strict-catch/AGENTS.md) — `strict` を維持し、`catch` を `unknown` として絞り込む
@@ -54,6 +56,7 @@ skill/
 
 ### skill
 
+- [skill/common/add-claude-hook/SKILL.md](skill/common/add-claude-hook/SKILL.md) — Claude Code に hook を追加し、決まった出来事の前後でスクリプトを走らせる
 - [skill/common/block-secret-commits/SKILL.md](skill/common/block-secret-commits/SKILL.md) — コミット前に秘密と強制 push を止める
 - [skill/common/explain-before-shorten/SKILL.md](skill/common/explain-before-shorten/SKILL.md) — 日本語の説明を、口頭で伝わる文章にしてから意味を保って短くする
 - [skill/common/prune-agents-md/SKILL.md](skill/common/prune-agents-md/SKILL.md) — AGENTS.md と CLAUDE.md から、コードを読めば分かる指示を外す
@@ -66,6 +69,7 @@ skill/
 - [skill/nix/enable-python-uv/SKILL.md](skill/nix/enable-python-uv/SKILL.md) — devenv で uv と仮想環境を有効にする
 - [skill/nix/enable-typescript/SKILL.md](skill/nix/enable-typescript/SKILL.md) — devenv で Node.js と TypeScript を有効にする
 - [skill/python/add-dependency-with-uv/SKILL.md](skill/python/add-dependency-with-uv/SKILL.md) — `uv add` / `uv remove` で依存とロックを更新する
+- [skill/python/add-workspace-member/SKILL.md](skill/python/add-workspace-member/SKILL.md) — uv workspace へパッケージを追加し、メンバー間の依存を workspace から取る
 - [skill/python/run-ruff/SKILL.md](skill/python/run-ruff/SKILL.md) — 変更箇所を Ruff で検査して整形する
 - [skill/react/fix-list-key/SKILL.md](skill/react/fix-list-key/SKILL.md) — リストの `key` を安定した ID に付け替える
 - [skill/react/remove-derived-effect/SKILL.md](skill/react/remove-derived-effect/SKILL.md) — 派生値の Effect を描画中の計算か `key` に置き換える
